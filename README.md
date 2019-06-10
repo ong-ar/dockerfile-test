@@ -49,3 +49,22 @@ RUN yum clean all
 - Repository 생성 (github repository 연동)
 
 ## 4. build 확인
+
+## 5. 직접 build & push
+
+```
+$ docker build --tag <Docker Hub 사용자 계정>/<이미지 이름>:<태그>
+
+$ docker push <Docker Hub 사용자 계정>/<이미지 이름>:<태그>
+
+# 실제 예
+$ docker build --tag ongar/centos6-php:latest
+
+$ docker push ongar/centos6-php:latest
+```
+
+- 만약 빌드 된 이미지 태그를 바꾸고 싶은 경우
+
+```
+$ docker tag ongar/centos6-php:latest ongar2/centos-php:latest
+```
